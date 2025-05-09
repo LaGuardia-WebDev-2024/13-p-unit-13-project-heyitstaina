@@ -1,9 +1,9 @@
 <!-- Unit 13 Project
 Requirements
 [Yes] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
+[Yes] Two Different jQuery Animation Methods 
 [  ] Add Five CSS Declarations
-[  ] Include Three Images
+[Yes] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -21,29 +21,28 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Taina✨</h1>
     <hr />
-    <!-- Movie Question -->
+    <!-- Emoji Question -->
     <form id="emoji-form">
       <label>
-        🎥 What is my favorite movie?
+        🎥 What is my favorite emoji?
         <select id="emoji-answer">
           <option value="emoji1">😜</option>
           <option value="emoji2">🤑</option>
           <option value="emoji3">💖</option>
           <option value="emoji4">🎀</option>
         </select>
-        
-             <img
-      id="emoji-pic"
-      src="https://emojiisland.com/cdn/shop/products/Sparkling_Pink_Heart_Emoji_large.png?v=1571606066"
-      width="50"
-    />
-        
+
+        <img
+          id="emoji-pic"
+          src="https://emojiisland.com/cdn/shop/products/Sparkling_Pink_Heart_Emoji_large.png?v=1571606066"
+          width="50"
+        />
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Emoji Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="emoji-result"></div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
@@ -55,45 +54,38 @@ Select ONE Additional Feature to Add
           <option value="book3">Harry Potter</option>
           <option value="book4">Twilight</option>
         </select>
-        
-         <img
-      id="book-pic"
-      src="https://m.media-amazon.com/images/I/91PlXDY2v3L.jpg"
-      width="50"
-    />
-        
+
+        <img
+          id="book-pic"
+          src="https://m.media-amazon.com/images/I/91PlXDY2v3L.jpg"
+          width="50"
+        />
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
-    
-    
-    
-     <div class="avatar">
-      <img
-        src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/13587247/That_s_his_eager_face.png?quality=90&strip=all&crop=12.326388888889,0,75,100"
-        width="150"
-      />
-    
-    
+
+    <img
+      id="spongebob"
+      src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/13587247/That_s_his_eager_face.png?quality=90&strip=all&crop=12.326388888889,0,75,100"
+      width="50"
+    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //Emoji Question jQuery Code
+      $("#emoji-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#emoji-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "emoji3") {
+          $("#emoji-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#emoji-result").text("Try Again!");
         }
       });
-      
-      
- 
 
       //Book Question jQuery Code
       $("#book-form").on("submit", function (event) {
@@ -108,32 +100,23 @@ Select ONE Additional Feature to Add
           $("#book-result").text("Try Again!");
         }
       });
-      
-      
-      
-  
 
       var $pic = $("#book-pic");
       $pic.hide();
-      $("#book-pic").slideDown(10000, function() {
-        
-      });      
-      
+      $("#book-pic").slideDown(10000, function () {});
+
       var $pic = $("#emoji-pic");
       $pic.hide();
-      $("#emoji-pic").slideDown(10000, function() {
-        
-      });      
-      
-      
-          $("img").animate({
-      width:"400px",
-      marginLeft: "30px",
-      borderWidth: "100px",
-    },1500);
-      
-      
-      
+      $("#emoji-pic").slideDown(10000, function () {});
+
+      $("#spongebob").animate(
+        {
+          width: "400px",
+          marginLeft: "30px",
+          borderWidth: "100px",
+        },
+        1500
+      );
     </script>
   </body>
 

@@ -1,4 +1,4 @@
-#movie-result {
+#emoji-result {
   background: rgb(244, 98, 181);
   border: 5px solid black;
   font-size: 24px;
@@ -18,5 +18,20 @@
 
 hr {
   height: 5px;
-  background-color: black;
+  background-color: pink;
+}
+
+h1 {
+  font-family: cursive;
+}
+
+body {
+  font-family: cursive;
+  color: pink;
+  
+}
+
+option {
+   font-family: cursive;
+  color: pink;
 }
