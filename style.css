@@ -28,10 +28,18 @@ h1 {
 body {
   font-family: cursive;
   color: pink;
-  
 }
 
 option {
-   font-family: cursive;
+  font-family: cursive;
   color: pink;
+}
+
+button {
+  font-family: cursive;
+  color: purple;
+}
+
+#enjoy {
+  font-family: "Kablammo", system-ui;
 }

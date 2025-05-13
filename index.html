@@ -2,11 +2,11 @@
 Requirements
 [Yes] Two Interactive Drop-down Inputs 
 [Yes] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
+[Yes] Add Five CSS Declarations
 [Yes] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ Yes ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
@@ -18,10 +18,19 @@ Select ONE Additional Feature to Add
   <head>
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <h1>Quiz About Taina✨</h1>
+    <h2 id="enjoy">Enjoy</h2>
     <hr />
     <!-- Emoji Question -->
     <form id="emoji-form">
@@ -103,11 +112,11 @@ Select ONE Additional Feature to Add
 
       var $pic = $("#book-pic");
       $pic.hide();
-      $("#book-pic").slideDown(10000, function () {});
+      $("#book-pic").slideDown(20000, function () {});
 
       var $pic = $("#emoji-pic");
       $pic.hide();
-      $("#emoji-pic").slideDown(10000, function () {});
+      $("#emoji-pic").slideDown(20000, function () {});
 
       $("#spongebob").animate(
         {
