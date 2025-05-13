@@ -1,12 +1,12 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[Yes] Two Interactive Drop-down Inputs 
+[Yes] Two Different jQuery Animation Methods 
+[Yes] Add Five CSS Declarations
+[Yes] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ Yes ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
@@ -18,53 +18,81 @@ Select ONE Additional Feature to Add
   <head>
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Taina✨</h1>
+    <h2 id="enjoy">Enjoy</h2>
     <hr />
-    <!-- Movie Question -->
-    <form id="movie-form">
+    <!-- Emoji Question -->
+    <form id="emoji-form">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        🎥 What is my favorite emoji?
+        <select id="emoji-answer">
+          <option value="emoji1">😜</option>
+          <option value="emoji2">🤑</option>
+          <option value="emoji3">💖</option>
+          <option value="emoji4">🎀</option>
         </select>
+
+        <img
+          id="emoji-pic"
+          src="https://emojiisland.com/cdn/shop/products/Sparkling_Pink_Heart_Emoji_large.png?v=1571606066"
+          width="50"
+        />
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Emoji Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="emoji-result"></div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">Dork Diaries</option>
+          <option value="book2">Frankenstein</option>
+          <option value="book3">Harry Potter</option>
+          <option value="book4">Twilight</option>
         </select>
+
+        <img
+          id="book-pic"
+          src="https://m.media-amazon.com/images/I/91PlXDY2v3L.jpg"
+          width="50"
+        />
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+
+    <img
+      id="spongebob"
+      src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/13587247/That_s_his_eager_face.png?quality=90&strip=all&crop=12.326388888889,0,75,100"
+      width="50"
+    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      //Emoji Question jQuery Code
+      $("#emoji-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#emoji-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
+        if (answer === "emoji3") {
+          $("#emoji-result").text("YESSSS!");
         } else {
-          $("#movie-result").text("Try Again!");
+          $("#emoji-result").text("Try Again!");
         }
       });
 
@@ -81,6 +109,23 @@ Select ONE Additional Feature to Add
           $("#book-result").text("Try Again!");
         }
       });
+
+      var $pic = $("#book-pic");
+      $pic.hide();
+      $("#book-pic").slideDown(20000, function () {});
+
+      var $pic = $("#emoji-pic");
+      $pic.hide();
+      $("#emoji-pic").slideDown(20000, function () {});
+
+      $("#spongebob").animate(
+        {
+          width: "400px",
+          marginLeft: "30px",
+          borderWidth: "100px",
+        },
+        1500
+      );
     </script>
   </body>
 
